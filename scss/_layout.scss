@@ -1,0 +1,58 @@
+body{
+	margin:40px;
+}
+.site{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	//grid-template-rows:20% 20% 20% 30% ;
+	grid-template-rows:8em 1fr 1fr 1fr;
+	//grid-template-rows:8em 20% 20% 40%;
+	grid-gap: 1em 1em;
+
+	grid-template-areas:
+		"title title title title title title"
+		"causes causes situation situation solution solution"
+		"role role role pesticides pesticides pesticides"
+		"action action action action action action";
+}
+//Web page 
+@media screen and (min-width: 737px) and (max-width: 1680px){
+	.site{
+		grid-template-areas:
+		"title title title title title title"
+		"causes causes situation situation solution solution"
+		"role role role pesticides pesticides pesticides"
+		"action action action action action action";
+	}
+}
+//tablet
+@media screen and (min-width: 506px) and (max-width: 736px){
+	.site{
+		grid-template-areas:
+		"title title title title title title"
+		"causes causes causes causes causes causes"
+		"situation situation situation situation situation situation"
+		"solution solution solution solution solution solution"
+		"role role role pesticides pesticides pesticides"
+		"action action action action action action";
+	}
+}
+//mobile
+@media screen and (max-width: 505px){
+	// header{
+	// 	max-height: 200px;
+	// 	//max-width: 100%;
+	// }
+	.site{
+		// font-size: 4em;
+		grid-template-areas:
+		". . . . . ."
+		"causes causes causes causes causes causes"
+		"situation situation situation situation situation situation"
+		"solution solution solution solution solution solution"
+		"role role role role role role"
+		"pesticides pesticides pesticides pesticides pesticides pesticides"
+		"action action action action action action";
+	}
+}
+

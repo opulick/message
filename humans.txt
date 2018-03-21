@@ -3,11 +3,11 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    <Olivia Pulick> -- <Web Designer> -- <twitter>
 
 # THANKS
 
-    <name>
+    <Olivia Pulick>
 
 # TECHNOLOGY COLOPHON
 

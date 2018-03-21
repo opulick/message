@@ -6,6 +6,7 @@
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
 html {
   line-height: 1.15;
   /* 1 */
@@ -432,6 +433,16 @@ template {
   display: none;
 }
 
+:root {
+  --page-bg: #D65966;
+  --nav-bg: #3A848C;
+  --main-bg: #FFE2CF;
+  --aside-bg: #D68C86;
+  --footer-bg: #8C3724;
+  --info-bg: black;
+  --info-txt: white;
+}
+
 /*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
 /*
  * What follows is the result of much research on cross-browser styling.
@@ -516,6 +527,98 @@ textarea {
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
+}
+
+header::after, section::after {
+  display: block;
+  position: absolute;
+  font-family: "Input Mono", "Courier New", Courier, monospace;
+  background: var(--info-bg);
+  color: var(--info-txt);
+  top: 1em;
+  left: 1em;
+  height: 1.25em;
+  width: auto;
+  padding: 0.25em 0.5em;
+  border-radius: 5px;
+}
+
+body {
+  background: url("../img/Save_the_bees_bkgd.png") center center fixed no-repeat;
+}
+
+header {
+  background: var(--page-bg);
+  grid-area: title;
+  background: url("../img/title.png") center no-repeat;
+}
+header h1 {
+  position: absolute;
+  left: -999em;
+  top: -999em;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+}
+
+p {
+  font-family: "Playfair Display", serif;
+}
+
+#cause {
+  background: var(--sec-bg);
+  grid-area: causes;
+  background: #F29F05;
+  opacity: .9;
+  padding: 0% 5% 0% 5%;
+  border-radius: 10px;
+}
+
+#situation {
+  background: var(--sec-bg);
+  grid-area: situation;
+  background: #F29F05;
+  opacity: .9;
+  padding: 0% 5% 0% 5%;
+  border-radius: 10px;
+}
+
+#solution {
+  background: var(--sec-bg);
+  grid-area: solution;
+  background: #F29F05;
+  opacity: .9;
+  padding: 0% 5% 0% 5%;
+  border-radius: 10px;
+}
+
+#role {
+  background: var(--sec-bg);
+  grid-area: role;
+  background: #F29F05;
+  opacity: .9;
+  padding: 0% 5% 0% 5%;
+  border-radius: 10px;
+}
+
+#pesticides {
+  background: var(--sec-bg);
+  grid-area: pesticides;
+  background: #F29F05;
+  opacity: .9;
+  padding: 0% 5% 0% 5%;
+  border-radius: 10px;
+}
+
+#action {
+  background: var(--sec-bg);
+  grid-area: action;
+  background: #F29F05;
+  opacity: .9;
+  padding: 0% 5% 0% 5%;
+  border-radius: 10px;
 }
 
 /* ==========================================================================
@@ -682,5 +785,32 @@ textarea {
   h2,
   h3 {
     page-break-after: avoid;
+  }
+}
+body {
+  margin: 40px;
+}
+
+.site {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 8em 1fr 1fr 1fr;
+  grid-gap: 1em 1em;
+  grid-template-areas: "title title title title title title" "causes causes situation situation solution solution" "role role role pesticides pesticides pesticides" "action action action action action action";
+}
+
+@media screen and (min-width: 737px) and (max-width: 1680px) {
+  .site {
+    grid-template-areas: "title title title title title title" "causes causes situation situation solution solution" "role role role pesticides pesticides pesticides" "action action action action action action";
+  }
+}
+@media screen and (min-width: 506px) and (max-width: 736px) {
+  .site {
+    grid-template-areas: "title title title title title title" "causes causes causes causes causes causes" "situation situation situation situation situation situation" "solution solution solution solution solution solution" "role role role pesticides pesticides pesticides" "action action action action action action";
+  }
+}
+@media screen and (max-width: 505px) {
+  .site {
+    grid-template-areas: ". . . . . ." "causes causes causes causes causes causes" "situation situation situation situation situation situation" "solution solution solution solution solution solution" "role role role role role role" "pesticides pesticides pesticides pesticides pesticides pesticides" "action action action action action action";
   }
 }

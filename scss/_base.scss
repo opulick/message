@@ -1,0 +1,104 @@
+
+header,section{
+	// border: solid 1px white;
+	// border-radius: 10px;
+	// position: relative;
+	// min-height: 200px;
+
+&::after{
+	@include info;
+ }//end after
+}//end box
+body{
+	background: url('../img/Save_the_bees_bkgd.png')center center fixed no-repeat;
+}
+header{
+	background: var(--page-bg);
+	//&::after{content: "header"};
+	grid-area:title;
+	background: url('../img/title.png') center no-repeat;
+	// max-height: auto;
+	//max-width: 100%;
+	//height: 200px;
+	h1{
+		position: absolute;
+		left: -999em;
+		top: -999em;
+	}
+
+}
+h2{
+	font-family: $textbody;
+	text-align: center;
+}
+p{
+	font-family: $textbody;
+}
+#cause{
+	background: var(--sec-bg);
+	//&::after{content: "cause"};
+	//grid-column: 1/4;
+	//grid-row:3/4
+	grid-area:causes;
+	background: #F29F05;
+	opacity: .9;
+    padding: 0% 5% 0% 5%;
+    border-radius:10px;
+}
+
+#situation{
+	background: var(--sec-bg);
+	//&::after{content: "situation"};
+	//grid-column: 1/4;
+	//grid-row:3/4
+	grid-area:situation;
+	background: #F29F05;
+	opacity: .9;
+    padding: 0% 5% 0% 5%;
+    border-radius:10px;
+}
+#solution{
+	background: var(--sec-bg);
+	//&::after{content: "solution"};
+	//grid-column: 1/4;
+	//grid-row:3/4
+	grid-area:solution;
+	background: #F29F05;
+	opacity: .9;
+    padding: 0% 5% 0% 5%;
+    border-radius:10px;
+}
+#role{
+	background: var(--sec-bg);
+	//&::after{content: "role"};
+	//grid-column: 1/4;
+	//grid-row:3/4
+	grid-area:role;
+	background: #F29F05;
+	opacity: .9;
+    padding: 0% 5% 0% 5%;
+    border-radius:10px;
+}
+
+#pesticides{
+	background: var(--sec-bg);
+	//&::after{content: "pesticides"};
+	//grid-column: 1/4;
+	//grid-row:3/4
+	grid-area:pesticides;
+	background: #F29F05;
+	opacity: .9;
+    padding: 0% 5% 0% 5%;
+    border-radius:10px;
+}
+#action{
+	background: var(--sec-bg);
+	//&::after{content: "action"};
+	//grid-column: 1/4;
+	//grid-row:3/4
+	grid-area:action;
+	background: #F29F05;
+	opacity: .9;
+    padding: 0% 5% 0% 5%;
+    border-radius:10px;
+}
