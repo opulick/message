@@ -1,3 +1,21 @@
+@import 'icon/*.png';
+@include all-icon-sprites;
+
+li{
+	list-style: none;
+	display: inline-block;
+	padding-left: 210px;
+	a{
+		display: inline-block;
+		width: 400px;
+		height: 70px;
+		span{
+			position: absolute;
+			top: -9999em;
+			left:-9999em;
+		}//go
+	}//icons
+}//li
 
 header,section{
 	// border: solid 1px white;
@@ -31,7 +49,7 @@ h2{
 	font-family: $textbody;
 	text-align: center;
 }
-p{
+p,footer{
 	font-family: $textbody;
 }
 #cause{
@@ -101,4 +119,16 @@ p{
 	opacity: .9;
     padding: 0% 5% 0% 5%;
     border-radius:10px;
+}
+aside{
+	//background: var(--aside-bg);
+	//&::after{content: "aside"};
+	grid-area:sidebar;
+}
+
+footer{
+	//background: var(--footer-bg);
+	//&::after{content: "footer"};
+	grid-area:footer;
+	text-align: right;
 }

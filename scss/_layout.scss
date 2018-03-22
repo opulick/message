@@ -1,28 +1,28 @@
 body{
-	margin:40px;
+	margin:20px;
 }
 .site{
+	//could not figure out how to work the other properties of grids (1em or px) I just used fr since it was the only thing working
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-	//grid-template-rows:20% 20% 20% 30% ;
-	grid-template-rows:8em 1fr 1fr 1fr;
-	//grid-template-rows:8em 20% 20% 40%;
+	grid-template-rows:1fr 1fr 1fr 1fr .5fr;
 	grid-gap: 1em 1em;
-
 	grid-template-areas:
 		"title title title title title title"
-		"causes causes situation situation solution solution"
+		"situation situation causes causes solution solution"
 		"role role role pesticides pesticides pesticides"
-		"action action action action action action";
+		"action action action action action action"
+		". . sidebar sidebar footer footer";
 }
 //Web page 
 @media screen and (min-width: 737px) and (max-width: 1680px){
 	.site{
 		grid-template-areas:
 		"title title title title title title"
-		"causes causes situation situation solution solution"
+		"situation situation causes causes solution solution"
 		"role role role pesticides pesticides pesticides"
-		"action action action action action action";
+		"action action action action action action"
+		". . sidebar sidebar footer footer";
 	}
 }
 //tablet
@@ -30,11 +30,12 @@ body{
 	.site{
 		grid-template-areas:
 		"title title title title title title"
-		"causes causes causes causes causes causes"
 		"situation situation situation situation situation situation"
+		"causes causes causes causes causes causes"
 		"solution solution solution solution solution solution"
 		"role role role pesticides pesticides pesticides"
-		"action action action action action action";
+		"action action action action action action"
+		"sidebar sidebar sidebar footer footer footer";
 	}
 }
 //mobile
@@ -47,12 +48,15 @@ body{
 		// font-size: 4em;
 		grid-template-areas:
 		". . . . . ."
-		"causes causes causes causes causes causes"
 		"situation situation situation situation situation situation"
+		"causes causes causes causes causes causes"
 		"solution solution solution solution solution solution"
 		"role role role role role role"
 		"pesticides pesticides pesticides pesticides pesticides pesticides"
-		"action action action action action action";
+		"action action action action action action"
+		"sidebar sidebar sidebar sidebar sidebar sidebar"
+		"footer footer footer footer footer footer"
+		;
 	}
 }
 
