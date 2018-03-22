@@ -531,6 +531,12 @@ textarea {
   background-position: 0 0;
 }
 
+ol li {
+  list-style: none;
+  display: inline-block;
+  padding-left: 10px;
+}
+
 li {
   list-style: none;
   display: inline-block;
@@ -821,7 +827,7 @@ body {
 .site {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr .5fr;
+  grid-template-rows: .4fr .5fr 1fr .6fr .2fr;
   grid-gap: 1em 1em;
   grid-template-areas: "title title title title title title" "situation situation causes causes solution solution" "role role role pesticides pesticides pesticides" "action action action action action action" ". . sidebar sidebar footer footer";
 }

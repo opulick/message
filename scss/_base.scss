@@ -1,6 +1,12 @@
 @import 'icon/*.png';
 @include all-icon-sprites;
-
+ol{
+	li{
+		list-style: none;
+		display: inline-block;
+		padding-left: 10px;
+	}
+}
 li{
 	list-style: none;
 	display: inline-block;

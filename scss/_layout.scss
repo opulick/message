@@ -5,7 +5,7 @@ body{
 	//could not figure out how to work the other properties of grids (1em or px) I just used fr since it was the only thing working
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-	grid-template-rows:1fr 1fr 1fr 1fr .5fr;
+	grid-template-rows:.4fr .5fr 1fr .6fr .2fr;
 	grid-gap: 1em 1em;
 	grid-template-areas:
 		"title title title title title title"
